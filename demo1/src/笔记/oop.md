@@ -39,3 +39,74 @@
 
 **private 方法**
 
+```agsl
+package oop.demo06;
+
+public class Student extends Person{
+
+    @Override
+    public void run() {
+        System.out.println("son");
+    }
+
+    public void eat(){
+        System.out.println("ear");
+    }
+}
+```
+
+```agsl
+package oop.demo06;
+
+public class Person {
+
+    public void run(){
+
+    }
+}
+
+```
+
+```package oop.demo06;
+
+public class Application {
+    public static void main(String[] args) {
+        //一个对象的实际类型是确定的
+        //new Student();
+        //new Person();
+
+        //可以指向的引用类型就不确定了：父类的引用指向子类
+
+        //Student 能调用的方法都是自己的或者集成父类的！
+        Student s1 = new Student();
+        Person s2 = new Student();
+        Object s3 = new Student();
+
+        // 对象能执行哪些方法，主要看对象左边的类型，和右边关系不大！
+        s2.run();   //子类重写了父类的方法，执行子类的方法
+        ((Student) s2 ).eat();
+        s1.eat();
+
+    }
+}
+```
+
+
+System.out.println(X instanceof Y);  能不能编译通过
+
+取决于x和y之间是否有父子关系
+
+* 父类引用指向子类的对象
+* 把子类转换为父类，向上转型；
+* 把父类转换为子类，向下转型；强制转换
+* 方便方法的调用，减少重复的代码！简洁
+
+
+# 接口的作用
+* 约束
+* 定义一些方法，让不同的人实现
+* public abstract
+* public static final
+* 接口不能被实例化，接口中没有构造方法
+* implements可以实现多个接口
+* 必须要重写接口中的方法·

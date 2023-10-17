@@ -1,4 +1,4 @@
-package oop;
+package oop.demo03;
 
 import oop.demo03.Pet;
 

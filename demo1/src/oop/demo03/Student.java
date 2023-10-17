@@ -1,4 +1,4 @@
-package oop;
+package oop.demo03;
 
 public class Student {
 
