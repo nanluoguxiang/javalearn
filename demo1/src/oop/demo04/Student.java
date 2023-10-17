@@ -9,6 +9,7 @@ public class Student {
     private String name;// 名字
     private int id;// 学号
     private char sex;// 性别
+    private int age;
 
     // 提供一些可以操作这个属性的方法！
     // 提供一些public的geset方法
@@ -38,5 +39,13 @@ public class Student {
 
     public void setSex(char sex) {
         this.sex = sex;
+    }
+
+    public void setAge(int age){
+        if(age > 120 || age < 0){
+            this.age = 3;
+    }else{
+            this.age = age;
+        }
     }
 }
